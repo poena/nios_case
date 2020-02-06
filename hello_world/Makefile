@@ -11,4 +11,4 @@ project: system.qsys
 	quartus_sh -t hello_world.tcl
 
 clean:
-	-rm -rf system incremental_db db output_files *.qpf *.qsf .qsys_edit
+	-rm -rf system incremental_db db output_files *.qpf *.qsf .qsys_edit *.qsys *.sopcinfo

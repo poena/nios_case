@@ -45,13 +45,15 @@ set_global_assignment -name FAMILY "Arria 10"
 set_global_assignment -name DEVICE 10AX115H1F34E1SG
 set_global_assignment -name TOP_LEVEL_ENTITY system
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:47:52  FEBRUARY 05, 2020"
+#set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:47:52  FEBRUARY 05, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name QSYS_FILE system.qsys
+set_global_assignment -name SDC_FILE hello_world.sdc
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -69,6 +71,7 @@ set_location_assignment PIN_AE24 -to led_export[6]
 set_location_assignment PIN_AD25 -to led_export[7]
 
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+
 
 load_package flow
 execute_flow -compile
