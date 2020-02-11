@@ -58,8 +58,10 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name IO_STANDARD LVDS -to clk_clk
-set_location_assignment PIN_K6 -to clk_clk
-set_location_assignment PIN_L6 -to "clk_clk(n)"
+#set_location_assignment PIN_K6 -to clk_clk
+#set_location_assignment PIN_L6 -to "clk_clk(n)"
+set_location_assignment PIN_AD28 -to clk_clk
+set_location_assignment PIN_AD27 -to "clk_clk(n)"
 set_location_assignment PIN_AH25 -to reset_reset_n
 set_location_assignment PIN_AG25 -to led_export[0]
 set_location_assignment PIN_AF25 -to led_export[1]
